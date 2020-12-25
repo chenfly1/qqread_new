@@ -752,9 +752,8 @@ function showmsg() {
   ).toLocaleString()} \n\n`;
   
   if (
-    (d.getHours() == 12 && d.getMinutes() <= 20) ||
+    (d.getHours() == 01 && d.getMinutes() <= 50) ||
     (d.getHours() == 23 && d.getMinutes() >= 40)
-    (d.getHours() == 1 && d.getMinutes() >= 10)
   ) {
     notify.sendNotify(jsname, kz);
   }
