@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/chenfly1/qqread1.git ~/qqread1
+          git clone https://github.com/chenfly1/qqread_new.git ~/qqread_new
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,12 +30,12 @@ jobs:
       - name: npm install
         if: env.QQREAD_TIMEHD
         run: |
-          cd ~/Task
+          cd ~/qqread_new
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_TIMEHD
         run: |
-          cd ~/qqread1
+          cd ~/qqread_new
           node Task/qqreads.js
         env:
           
